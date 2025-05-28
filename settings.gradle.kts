@@ -18,7 +18,7 @@ pluginManagement {
         //id ("fabric-loom") version settings["loom_version"]
         id ("architectury-plugin") version settings["arch_plugin_version"]
         id ("dev.architectury.loom") version settings["loom_version"]
-        id ("com.github.johnrengelman.shadow") version settings["shadow_version"]
+        id ("com.gradleup.shadow") version settings["shadow_version"]
         id ("io.github.juuxel.loom-quiltflower") version settings["quiltflower_version"]
 
         id ("org.ajoberstar.grgit") version settings["grgit_version"]

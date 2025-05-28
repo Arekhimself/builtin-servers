@@ -1,7 +1,7 @@
 operator fun Project.get(property: String): String = property(property) as String
 
 plugins {
-    id("com.github.johnrengelman.shadow")
+    id("com.gradleup.shadow")
 }
 
 architectury {
