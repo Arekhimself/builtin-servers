@@ -31,17 +31,17 @@ jobs:
             forge/build/libs/*.jar
           generate_release_notes: true
       - name: Publish to GitHub
-        if: ${{ secrets.GH_API_KEY != '' }}
+        if: ${{ github.secrets.GH_API_KEY != '' }}
         run: ./gradlew github
         env:
           GITHUB_TOKEN: ${{ secrets.GH_API_KEY }}
       - name: Publish to CurseForge
-        if: ${{ secrets.CURSEFORGE_API_KEY != '' }}
+        if: ${{ github.secrets.CURSEFORGE_API_KEY != '' }}
         run: ./gradlew curseforge
         env:
           CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
       - name: Publish to Modrinth
-        if: ${{ secrets.MODRINTH_TOKEN != '' }}
+        if: ${{ github.secrets.MODRINTH_TOKEN != '' }}
         run: ./gradlew modrinth
         env:
           MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
