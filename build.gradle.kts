@@ -1,10 +1,11 @@
-﻿import org.ajoberstar.grgit.Grgit
-import org.kohsuke.github.GitHub
-import org.kohsuke.github.GHReleaseBuilder
-import com.matthewprenger.cursegradle.CurseProject
+﻿
 import com.matthewprenger.cursegradle.CurseArtifact
+import com.matthewprenger.cursegradle.CurseProject
 import com.matthewprenger.cursegradle.CurseRelation
 import com.matthewprenger.cursegradle.Options
+import org.ajoberstar.grgit.Grgit
+import org.kohsuke.github.GHReleaseBuilder
+import org.kohsuke.github.GitHub
 import java.util.*
 
 operator fun Project.get(property: String): String = property(property) as String
@@ -18,7 +19,6 @@ buildscript {
 plugins {
     id("architectury-plugin")
     id("dev.architectury.loom") apply false
-    id("io.github.juuxel.loom-quiltflower") apply false
 
     id("base") //Gradle Base Plugin
 
@@ -77,7 +77,6 @@ allprojects {
 subprojects {
     apply {
         plugin("dev.architectury.loom")
-        plugin("io.github.juuxel.loom-quiltflower")
 
         plugin("maven-publish")
         plugin("org.ajoberstar.grgit")
