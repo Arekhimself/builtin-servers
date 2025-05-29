@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[41,)"
+loaderVersion = "[54,)"
 issueTrackerURL = "https://github.com/lucaargolo/builtin-servers/issues"
 license = "Mozilla Public License 2.0"
 
@@ -17,13 +17,13 @@ displayURL = "https://github.com/lucaargolo/builtin-servers"
 [[dependencies.builtinservers]]
 modId = "forge"
 mandatory = true
-versionRange = "[41,)"
+versionRange = "[54,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.builtinservers]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.20,)"
+versionRange = "[1.21.4,)"
 ordering = "NONE"
 side = "BOTH"
