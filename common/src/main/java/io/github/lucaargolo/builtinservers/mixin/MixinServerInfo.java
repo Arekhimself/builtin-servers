@@ -43,8 +43,12 @@ public class MixinServerInfo implements MixedServerInfo {
     @Inject(at = @At("TAIL"), method = "fromNbt", locals = LocalCapture.CAPTURE_FAILSOFT)
     private static void builtinservers_readCustomDataFromNbt(NbtCompound root, CallbackInfoReturnable<ServerInfo> cir, ServerInfo serverInfo) {
         MixedServerInfo mixedServerInfo = (MixedServerInfo) serverInfo;
-        mixedServerInfo.builtinservers_setBuiltin(root.getBoolean("builtinservers_isBuiltin"));
-        mixedServerInfo.builtinservers_setForced(root.getBoolean("builtinservers_isForced"));
+        mixedServerInfo.builtinservers_setBuiltin(
+            root.getBoolean("builtinservers_isBuiltin").orElse(false)
+        );
+        mixedServerInfo.builtinservers_setForced(
+            root.getBoolean("builtinservers_isForced").orElse(false)
+        );
     }
 
 }
