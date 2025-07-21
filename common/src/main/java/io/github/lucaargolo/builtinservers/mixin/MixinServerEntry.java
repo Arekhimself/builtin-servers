@@ -38,7 +38,7 @@ public class MixinServerEntry {
             int badgeWidth = this.client.textRenderer.getWidth(builtinservers_BADGE);
             context.drawText(this.client.textRenderer, builtinservers_BADGE.formatted(Formatting.GOLD), x +entryWidth - badgeWidth - 3, y + 1 + 9, 0xFFFFFF, false);
             if(mouseX >= x + entryWidth - badgeWidth - 3 && mouseX <= x + entryWidth - 3 && mouseY >= y + 1 + 9 && mouseY <= y + 1 + 9 + 9) {
-                this.screen.setTooltip(List.of(builtinservers_DESCRIPTION.asOrderedText()));
+                context.drawOrderedTooltip(client.textRenderer, List.of(builtinservers_DESCRIPTION.asOrderedText()), mouseX, mouseY);
             }
         }
     }

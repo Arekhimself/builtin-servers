@@ -34,7 +34,7 @@ public abstract class MixinMultiplayerScreen extends Screen {
             if(entry instanceof MultiplayerServerListWidget.ServerEntry serverEntry) {
                 MixedServerInfo mixedServerInfo = (MixedServerInfo) serverEntry.getServer();
                 if(mixedServerInfo.builtinservers_isForced()) {
-                    this.setTooltip(List.of(builtinservers_FORCED_TOOLTIP.asOrderedText()));
+                    context.drawOrderedTooltip(this.textRenderer, List.of(builtinservers_FORCED_TOOLTIP.asOrderedText()), mouseX, mouseY);
                 }
             }
         }
