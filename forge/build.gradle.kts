@@ -36,7 +36,7 @@ configurations {
 }
 
 dependencies {
-    forge("net.minecraftforge:forge:${rootProject["forge_version"]}")
+    //forge("net.minecraftforge:forge:${rootProject["forge_version"]}")
 
     common(project(":common", "namedElements")) { isTransitive=false }
     shadowCommon(project(":common", "transformProductionForge")) { isTransitive=false }
